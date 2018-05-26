@@ -223,7 +223,9 @@ do
   # Grab the cover art if available.
   cover_path="${output_directory}/cover.jpg"
   log "Extracting cover into ${cover_path}..."
-  </dev/null ffmpeg -loglevel error -activation_bytes "${auth_code}" -i "${path}" -an -codec:v copy "${cover_path}"    
+  if [ ! -f "{cover_path}" ]; then
+    </dev/null ffmpeg -loglevel error -activation_bytes "${auth_code}" -i "${path}" -an -codec:v copy "${cover_path}"    
+  fi
 
   # -----
   # OK now spit the file if that's what you want.
