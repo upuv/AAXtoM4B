@@ -46,7 +46,7 @@ bash AAXtoMP3 [-f|--flac] [-o|--opus] [-a|-aac] [-s|--single] [-c|--chaptered] [
 * **-e:m4a**         Create a m4a audio file. This is identical to --aac
 * **-e:m4b**         Create a m4b aduio file. This is the book version of the m4a format. 
 * **-s** or **--single**    Output a single file for the entire book. If you only want a single ogg file for instance.
-* **-c** or **--chaptered** Output a single file per chapter. The --chaptered will only work if it follows the -aac -e:m4a -em4b options. 
+* **-c** or **--chaptered** Output a single file per chapter. The `--chaptered` will only work if it follows the `--aac -e:m4a -e:m4b` options. 
 
 
 ### [AUTHCODE] 
@@ -117,7 +117,7 @@ __Note:__ At least one of the above must be exist. The code must also match the 
 __Ubuntu, Linux Mint, Debian__
 ```
 sudo apt-get update
-sudo apt-get install ffmpeg libav-tools x264 x265
+sudo apt-get install ffmpeg libav-tools x264 x265 bc
 ```
 
 __Fedora__
